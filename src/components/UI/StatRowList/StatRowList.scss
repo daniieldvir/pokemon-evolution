@@ -1,0 +1,38 @@
+.back-stat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .back-stat-name {
+    font-size: 9px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 32px;
+  }
+
+  .back-stat-bar-container {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+
+    .back-stat-bar {
+      height: 100%;
+      background: var(--card-color);
+      border-radius: 2px;
+      box-shadow: 0 0 10px
+        color-mix(in srgb, var(--card-color) 40%, transparent);
+    }
+  }
+
+  .back-stat-value {
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    min-width: 24px;
+    text-align: right;
+  }
+}

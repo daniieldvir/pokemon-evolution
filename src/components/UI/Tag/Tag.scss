@@ -1,0 +1,13 @@
+.tag {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 2px;
+  background: var(--tag-background, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: var(--tag-width, fit-content);
+  height: var(--tag-height, fit-content);
+}

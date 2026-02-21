@@ -1,0 +1,35 @@
+.comparison-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 32px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  .comparison-notice-button {
+    margin-left: 16px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    .comparison-notice-text {
+      font-size: 14px;
+    }
+    .comparison-notice-button {
+      font-size: 14px;
+    }
+  }
+}

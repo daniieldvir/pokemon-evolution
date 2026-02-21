@@ -1,0 +1,137 @@
+.pokeball-loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #2b2b2b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation:
+    spin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite,
+    bounce 1s ease-in-out infinite alternate;
+  background-color: white;
+
+  &.no-animation {
+    animation: none;
+
+    .pokeball-center-inner {
+      animation: none;
+    }
+  }
+
+  &.small {
+    width: 24px;
+    height: 24px;
+    border-width: 1.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    .pokeball-top {
+      border-bottom-width: 1.5px;
+    }
+
+    .pokeball-center-outer {
+      width: 8px;
+      height: 8px;
+      border-width: 1.5px;
+
+      .pokeball-center-inner {
+        width: 3px;
+        height: 3px;
+        border-width: 0.5px;
+      }
+    }
+  }
+
+  .pokeball-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #ee1515;
+    border-bottom: 3px solid #2b2b2b;
+    box-sizing: border-box;
+  }
+
+  .pokeball-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+  }
+
+  .pokeball-center-outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border: 3px solid #2b2b2b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    .pokeball-center-inner {
+      width: 8px;
+      height: 8px;
+      background-color: #f0f0f0;
+      border: 1px solid #2b2b2b;
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    background-color: #f0f0f0;
+  }
+
+  50% {
+    background-color: #ff5959;
+    box-shadow: 0 0 5px #ff5959;
+  }
+}
+
+@keyframes pulse-text {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
